@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.GoogleHomePage;
-import test.BaseTest;
 
 public class WikipediaPageTitleTest extends BaseTest{
     public WikipediaPageTitleTest(WebDriver driver) {

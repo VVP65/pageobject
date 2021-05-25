@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.WikipediaHomePage;
-import test.BaseTest;
 
 public class WikipediaScreenshotTest extends BaseTest {
     public WikipediaScreenshotTest(WebDriver driver) {
