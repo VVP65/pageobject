@@ -1,0 +1,24 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import test.BaseTest;
+import org.testng.annotations.Test;
+import pageobject.GoogleHomePage;
+
+public class WikipediaGoogleSearchResultsPageLengthTest extends BaseTest {
+    public WikipediaGoogleSearchResultsPageLengthTest(WebDriver driver) {
+        super(driver);
+    }
+
+    @Test
+    public void wikipediaGoogleSearchResultsPageLength() {
+        int wikipediaGoogleSearchResultPageLength = new GoogleHomePage(driver)
+                .openGooglePage()
+                .searchForTerms("wikipedia")
+                .searchResultLength();
+
+        Assert.assertTrue(wikipediaGoogleSearchResultPageLength > 0, "Google Search result for 'wikipedia' text does not contain expected text.");
+        logger.info(String.format("Wikipedia Google Search Result Page Length: %s", wikipediaGoogleSearchResultPageLength));
+    }
+}

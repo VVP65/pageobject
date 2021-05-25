@@ -1,0 +1,113 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object and Page Factory patterns test suite" verbose="1" parallel="tests" thread-count="4">
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="test.WikipediaGoogleSearchResultsPageLengthTest">
+            </class>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="test.WikipediaGoogleSearchResultsPageLengthTest">
+            </class>
+        </classes>
+    </test>
+    <test name="EdgeTest">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="test.WikipediaGoogleSearchResultsPageLengthTest">
+            </class>
+        </classes>
+    </test>
+    <!--    <test name="ChromeTest">-->
+    <!--        <parameter name="browser" value="Chrome"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.GoogleWikipediaSearchResult.WikipediaGoogleSearchResultTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FirefoxTest">-->
+    <!--        <parameter name="browser" value="Firefox"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.GoogleWikipediaSearchResult.WikipediaGoogleSearchResultTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="EdgeTest">-->
+    <!--        <parameter name="browser" value="Edge"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.GoogleWikipediaSearchResult.WikipediaGoogleSearchResultTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="ChromeTest">-->
+    <!--        <parameter name="browser" value="Chrome"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaHomePageTest.WikipediaPageTitleTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FirefoxTest">-->
+    <!--        <parameter name="browser" value="Firefox"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaHomePageTest.WikipediaPageTitleTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="EdgeTest">-->
+    <!--        <parameter name="browser" value="Edge"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaHomePageTest.WikipediaPageTitleTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="ChromeTest">-->
+    <!--        <parameter name="browser" value="Chrome"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaHomePageTest.WikipediaScreenshotTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FirefoxTest">-->
+    <!--        <parameter name="browser" value="Firefox"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaHomePageTest.WikipediaScreenshotTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="EdgeTest">-->
+    <!--        <parameter name="browser" value="Edge"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaHomePageTest.WikipediaScreenshotTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="ChromeTest">-->
+    <!--        <parameter name="browser" value="Chrome"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaSearchResultsPage.WikipediaSearchForTestAutomationResultsPageTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FirefoxTest">-->
+    <!--        <parameter name="browser" value="Firefox"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaSearchResultsPage.WikipediaSearchForTestAutomationResultsPageTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="EdgeTest">-->
+    <!--        <parameter name="browser" value="Edge"/>-->
+    <!--        <classes>-->
+    <!--            <class name="test.WikipediaSearchResultsPage.WikipediaSearchForTestAutomationResultsPageTest">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+
+</suite>
