@@ -6,9 +6,6 @@ import org.testng.annotations.Test;
 import pageobject.GoogleHomePage;
 
 public class WikipediaGoogleSearchResultTest extends BaseTest {
-    public WikipediaGoogleSearchResultTest(WebDriver driver) {
-                super(driver);
-    }
 
     @Test
     public void wikipediaGoogleSearchResultTest() {

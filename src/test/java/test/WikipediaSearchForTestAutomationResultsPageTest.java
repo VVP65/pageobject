@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 import pageobject.WikipediaHomePage;
 
 public class WikipediaSearchForTestAutomationResultsPageTest extends BaseTest {
-    public WikipediaSearchForTestAutomationResultsPageTest(WebDriver driver) {
-        super(driver);
-    }
+
     @Test
     public void searchForTestAutomationCheck(){
 

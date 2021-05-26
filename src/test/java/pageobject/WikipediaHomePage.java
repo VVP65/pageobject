@@ -23,11 +23,12 @@ public class WikipediaHomePage extends AbstractPage {
     }
 
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
-        //openPage(WIKIPEDIA_HOMEPAGE_URL);
+        openPage(WIKIPEDIA_HOMEPAGE_URL);
         wikipediaSearchInput.sendKeys(searchWikiTerm);
         wikipediaSearchInput.click();
         return new WikipediaSearchForTestAutomationResultsPage(driver, searchWikiTerm);
     }
+
     public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() {
         return screenshotOfTheFirstDYKSectionElement.getSize().getWidth();
     }

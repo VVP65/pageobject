@@ -6,9 +6,6 @@ import org.testng.annotations.Test;
 import pageobject.GoogleHomePage;
 
 public class WikipediaPageTitleTest extends BaseTest{
-    public WikipediaPageTitleTest(WebDriver driver) {
-        super(driver);
-    }
 
     @Test
     public void wikipediaPageTitleTest() {

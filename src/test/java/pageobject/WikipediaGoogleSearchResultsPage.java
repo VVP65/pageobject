@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class WikipediaGoogleSearchResultsPage extends AbstractPage {
     public WikipediaGoogleSearchResultsPage(WebDriver driver, String searchTerm) {
-                super(driver);
+        super(driver);
     }
     private String searchTerm;
 
