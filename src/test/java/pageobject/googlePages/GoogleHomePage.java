@@ -7,10 +7,6 @@ import pageobject.wikipediaPages.WikipediaGoogleSearchResultsPage;
 import pageobject.abstractPage.AbstractPage;
 
 public class GoogleHomePage extends AbstractPage {
-    public GoogleHomePage(WebDriver driver) {
-        super(driver);
-    }
-
     private static final String GOOGLE_HOMEPAGE_URL = "https://google.com";
 
     @FindBy(name = "q")
@@ -18,6 +14,10 @@ public class GoogleHomePage extends AbstractPage {
 
     @FindBy(xpath = "//*[@class='iblpc']")
     private WebElement googleSearchButton;
+
+    public GoogleHomePage(WebDriver driver) {
+        super(driver);
+    }
 
     public GoogleHomePage openGooglePage() {
         openPage(GOOGLE_HOMEPAGE_URL);

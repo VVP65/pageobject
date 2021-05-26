@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import pageobject.abstractPage.AbstractPage;
 
 public class WikipediaGoogleSearchResultsPage extends AbstractPage {
-    public WikipediaGoogleSearchResultsPage(WebDriver driver, String searchTerm) {
-        super(driver);
-    }
-
     private String searchTerm;
 
     @FindBy(xpath = "(.//a[contains(@accesskey,'z')])[1]")
     private WebElement firstSearchResultLink;
+
+    public WikipediaGoogleSearchResultsPage(WebDriver driver, String searchTerm) {
+        super(driver);
+    }
 
     public String searchResultsForWikipediaPageURL() {
 

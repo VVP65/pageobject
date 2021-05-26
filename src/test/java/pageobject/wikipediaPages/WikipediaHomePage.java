@@ -8,15 +8,15 @@ import pageobject.abstractPage.AbstractPage;
 public class WikipediaHomePage extends AbstractPage {
     private static final String WIKIPEDIA_HOMEPAGE_URL = "https://ru.wikipedia.org";
 
-    public WikipediaHomePage(WebDriver driver) {
-        super(driver);
-    }
-
     @FindBy(name = "search")
     private WebElement wikipediaSearchInput;
 
     @FindBy(xpath = "//div[contains(@id,'dyk')]//img")
     private WebElement screenshotOfTheFirstDYKSectionElement;
+
+    public WikipediaHomePage(WebDriver driver) {
+        super(driver);
+    }
 
     public WikipediaHomePage openWikipediaHomePage() {
         openPage(WIKIPEDIA_HOMEPAGE_URL);
