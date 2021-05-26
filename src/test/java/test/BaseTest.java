@@ -21,7 +21,6 @@ public class BaseTest  {
     protected WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
-
     @Parameters("browser")
     public void setup(@Optional("Chrome") String browser) throws Exception {
         if (browser.equalsIgnoreCase("Firefox")) {
