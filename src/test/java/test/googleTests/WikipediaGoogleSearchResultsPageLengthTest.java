@@ -1,9 +1,9 @@
-package test;
+package test.googleTests;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobject.GoogleHomePage;
+import pageobject.googlePages.GoogleHomePage;
+import test.baseTest.BaseTest;
 
 public class WikipediaGoogleSearchResultsPageLengthTest extends BaseTest {
     @Test

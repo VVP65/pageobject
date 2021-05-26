@@ -1,9 +1,9 @@
-package test;
+package test.wikipediaTests;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobject.GoogleHomePage;
+import pageobject.googlePages.GoogleHomePage;
+import test.baseTest.BaseTest;
 
 public class WikipediaPageTitleTest extends BaseTest {
     @Test

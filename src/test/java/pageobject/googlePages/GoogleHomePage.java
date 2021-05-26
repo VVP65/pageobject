@@ -1,8 +1,10 @@
-package pageobject;
+package pageobject.googlePages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pageobject.wikipediaPages.WikipediaGoogleSearchResultsPage;
+import pageobject.abstractPage.AbstractPage;
 
 public class GoogleHomePage extends AbstractPage {
     public GoogleHomePage(WebDriver driver) {

@@ -1,4 +1,4 @@
-package test;
+package test.baseTest;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;

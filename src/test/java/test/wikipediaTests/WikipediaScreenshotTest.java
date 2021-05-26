@@ -1,8 +1,9 @@
-package test;
+package test.wikipediaTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobject.WikipediaHomePage;
+import pageobject.wikipediaPages.WikipediaHomePage;
+import test.baseTest.BaseTest;
 
 public class WikipediaScreenshotTest extends BaseTest {
     @Test
