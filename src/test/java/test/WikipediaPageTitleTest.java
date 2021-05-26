@@ -5,8 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.GoogleHomePage;
 
-public class WikipediaPageTitleTest extends BaseTest{
-
+public class WikipediaPageTitleTest extends BaseTest {
     @Test
     public void wikipediaPageTitleTest() {
         String wikipediaPageTitle = new GoogleHomePage(driver)

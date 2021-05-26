@@ -6,10 +6,8 @@ import org.testng.annotations.Test;
 import pageobject.WikipediaHomePage;
 
 public class WikipediaSearchForTestAutomationResultsPageTest extends BaseTest {
-
     @Test
-    public void searchForTestAutomationCheck(){
-
+    public void searchForTestAutomationCheck() {
         String searchForTestAutomationSearch = new WikipediaHomePage(driver)
                 .openWikipediaHomePage()
                 .wikipediaSearchForTerms("Test Automation")

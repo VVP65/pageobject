@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pageobject.WikipediaHomePage;
 
 public class WikipediaScreenshotTest extends BaseTest {
-
     @Test
     public void wikipediaScreenshotIsPresentCheck() {
         int screenshotCapturedByAshot = new WikipediaHomePage(driver)

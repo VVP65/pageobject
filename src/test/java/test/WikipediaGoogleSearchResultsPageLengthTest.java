@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pageobject.GoogleHomePage;
 
 public class WikipediaGoogleSearchResultsPageLengthTest extends BaseTest {
-
     @Test
     public void wikipediaGoogleSearchResultsPageLength() {
         int wikipediaGoogleSearchResultPageLength = new GoogleHomePage(driver)

@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pageobject.GoogleHomePage;
 
 public class WikipediaGoogleSearchResultTest extends BaseTest {
-
     @Test
     public void wikipediaGoogleSearchResultTest() {
         String wikipediaGoogleSearchResult = new GoogleHomePage(driver)
@@ -14,7 +13,7 @@ public class WikipediaGoogleSearchResultTest extends BaseTest {
                 .searchForTerms("wikipedia")
                 .searchResultsForWikipediaPageURL();
 
-        Assert.assertTrue(wikipediaGoogleSearchResult.contains("wikipedia.org"), "Google page does NOT contain 'wikipedia.org' text");
+        Assert.assertTrue(wikipediaGoogleSearchResult.contains("wikipedia.org"), "Google search result page does NOT contain 'wikipedia.org' text");
         logger.info(String.format("The current page URL: %s", wikipediaGoogleSearchResult));
     }
 }
