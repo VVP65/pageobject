@@ -13,7 +13,7 @@ public class WikipediaSearchForTestAutomationResultsPageTest extends BaseTest {
                 .wikipediaSearchForTerms("Test Automation")
                 .wikipediaSearchResultPageTitle();
 
-        Assert.assertTrue(searchForTestAutomationSearch.contains("Test Automation"));
         logger.info(String.format("Wikipedia search for Test Automation page result -  '%s'", searchForTestAutomationSearch));
+        Assert.assertTrue(searchForTestAutomationSearch.contains("Test Automation"));
     }
 }

@@ -12,7 +12,7 @@ public class WikipediaScreenshotTest extends BaseTest {
                 .openWikipediaHomePage()
                 .getImageWidthForScreenshotOfTheFirstDYKSectionElement();
 
-        Assert.assertTrue(screenshotCapturedByAshot > 0, "The image doesn't exist");
         logger.info(String.format("The picture from 'Did You Know' section were successfully captured and placed into 'target\\screenshot' folder"));
+        Assert.assertTrue(screenshotCapturedByAshot > 0, "The image doesn't exist");
     }
 }

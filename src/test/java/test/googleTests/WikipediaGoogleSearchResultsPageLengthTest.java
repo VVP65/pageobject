@@ -13,7 +13,7 @@ public class WikipediaGoogleSearchResultsPageLengthTest extends BaseTest {
                 .searchForTerms("wikipedia")
                 .searchResultLength();
 
-        Assert.assertTrue(wikipediaGoogleSearchResultPageLength > 0, "Google Search result for 'wikipedia' text does not contain expected text.");
         logger.info(String.format("Wikipedia Google Search Result Page Length: %s", wikipediaGoogleSearchResultPageLength));
+        Assert.assertTrue(wikipediaGoogleSearchResultPageLength > 0, "Google Search result for 'wikipedia' text does not contain expected text.");
     }
 }

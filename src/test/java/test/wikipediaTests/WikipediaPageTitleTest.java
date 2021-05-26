@@ -13,7 +13,7 @@ public class WikipediaPageTitleTest extends BaseTest {
                 .searchForTerms("wikipedia")
                 .wikipediaPageTitle();
 
-        Assert.assertTrue(wikipediaPageTitle.contains("Википедия - свободная энциклопедия"));
         logger.info(String.format("Wiki Page Title: %s", wikipediaPageTitle));
+        Assert.assertTrue(wikipediaPageTitle.contains("Википедия - свободная энциклопедия"));
     }
 }
