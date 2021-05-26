@@ -14,6 +14,8 @@ import org.testng.annotations.Parameters;
 
 
 public class BaseTest  {
+    protected static final int WAIT_FOR_LOAD = 5;
+
     protected Logger logger = Logger.getGlobal();
 
     protected WebDriver driver;
@@ -34,7 +36,7 @@ public class BaseTest  {
         } else {
             throw new Exception("Browser is not correct");
         }
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(WAIT_FOR_LOAD, TimeUnit.SECONDS);
     }
 
     @AfterClass(alwaysRun = true)
