@@ -24,7 +24,6 @@ public class WikipediaHomePage extends AbstractPage {
     }
 
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
-        openPage(WIKIPEDIA_HOMEPAGE_URL);
         wikipediaSearchInput.sendKeys(searchWikiTerm);
         wikipediaSearchInput.click();
         return new WikipediaSearchForTestAutomationResultsPage(driver, searchWikiTerm);
