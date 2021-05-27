@@ -1,6 +1,5 @@
 package test.baseTest;
 
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
