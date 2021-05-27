@@ -21,12 +21,14 @@ public class GoogleHomePage extends AbstractPage {
 
     public GoogleHomePage openGooglePage() {
         openPage(GOOGLE_HOMEPAGE_URL);
+
         return this;
     }
 
     public WikipediaGoogleSearchResultsPage searchForTerms(String searchTerm) {
         googleSearchInput.sendKeys(searchTerm);
         googleSearchButton.click();
+
         return new WikipediaGoogleSearchResultsPage(driver);
     }
 }

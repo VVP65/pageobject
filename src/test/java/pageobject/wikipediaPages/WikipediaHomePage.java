@@ -20,12 +20,14 @@ public class WikipediaHomePage extends AbstractPage {
 
     public WikipediaHomePage openWikipediaHomePage() {
         openPage(WIKIPEDIA_HOMEPAGE_URL);
+
         return this;
     }
 
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
         wikipediaSearchInput.sendKeys(searchWikiTerm);
         wikipediaSearchInput.click();
+
         return new WikipediaSearchForTestAutomationResultsPage(driver);
     }
 
