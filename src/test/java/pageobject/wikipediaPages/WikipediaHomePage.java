@@ -20,7 +20,6 @@ public class WikipediaHomePage extends AbstractPage {
 
     public WikipediaHomePage openWikipediaHomePage() {
         openPage(WIKIPEDIA_HOMEPAGE_URL);
-
         return this;
     }
 
