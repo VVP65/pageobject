@@ -26,7 +26,7 @@ public class WikipediaHomePage extends AbstractPage {
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
         wikipediaSearchInput.sendKeys(searchWikiTerm);
         wikipediaSearchInput.click();
-        return new WikipediaSearchForTestAutomationResultsPage(driver, searchWikiTerm);
+        return new WikipediaSearchForTestAutomationResultsPage(driver);
     }
 
     public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() {
