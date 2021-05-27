@@ -34,7 +34,6 @@ public class BaseTest  {
         } else {
             throw new Exception("Browser is not correct");
         }
-        driver.manage().timeouts().implicitlyWait(WAIT_FOR_LOAD, TimeUnit.SECONDS);
     }
 
     @AfterClass(alwaysRun = true)
