@@ -5,9 +5,11 @@ import org.testng.annotations.Test;
 import pageobject.wikipediaPages.WikipediaHomePage;
 import test.baseTest.BaseTest;
 
+import java.io.IOException;
+
 public class WikipediaScreenshotTest extends BaseTest {
     @Test
-    public void wikipediaScreenshotIsPresentCheck() {
+    public void wikipediaScreenshotIsPresentCheck() throws IOException {
         int screenshotCapturedByAshot = new WikipediaHomePage(driver)
                 .openWikipediaHomePage()
                 .getImageWidthForScreenshotOfTheFirstDYKSectionElement();

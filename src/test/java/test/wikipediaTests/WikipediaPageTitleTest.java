@@ -2,18 +2,17 @@ package test.wikipediaTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobject.googlePages.GoogleHomePage;
+import pageobject.wikipediaPages.WikipediaHomePage;
 import test.baseTest.BaseTest;
 
 public class WikipediaPageTitleTest extends BaseTest {
     @Test
     public void wikipediaPageTitleTest() {
-        String wikipediaPageTitle = new GoogleHomePage(driver)
-                .openGooglePage()
-                .searchForTerms("wikipedia")
-                .wikipediaPageTitle();
+        String wikipediaPageTitle = new WikipediaHomePage(driver)
+                .openWikipediaHomePage()
+                .wikipediaHomePageTitle();
 
         logger.info(String.format("Wiki Page Title: %s", wikipediaPageTitle));
-        Assert.assertTrue(wikipediaPageTitle.contains("Википедия - свободная энциклопедия"));
+        Assert.assertTrue(wikipediaPageTitle.contains("Wikipedia, the free encyclopedia"), "Current page does not belong to Wikipedia project");
     }
 }

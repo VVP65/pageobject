@@ -26,7 +26,7 @@ public class GoogleHomePage extends AbstractPage {
 
     public WikipediaGoogleSearchResultsPage searchForTerms(String searchTerm) {
         googleSearchInput.sendKeys(searchTerm);
-        googleSearchButton.click();
+        googleSearchButton.submit();
 
         return new WikipediaGoogleSearchResultsPage(driver);
     }

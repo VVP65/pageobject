@@ -14,6 +14,6 @@ public class WikipediaSearchForTestAutomationResultsPageTest extends BaseTest {
                 .wikipediaSearchResultPageTitle();
 
         logger.info(String.format("Wikipedia search for Test Automation page result -  '%s'", searchForTestAutomationSearch));
-        Assert.assertTrue(searchForTestAutomationSearch.contains("Test Automation"));
+        Assert.assertTrue(searchForTestAutomationSearch.contains("Test automation"), "Current page does not contain 'Test automation' text");
     }
 }

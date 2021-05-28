@@ -1,5 +1,6 @@
 package pageobject.wikipediaPages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import pageobject.abstractPage.AbstractPage;
 
 public class WikipediaGoogleSearchResultsPage extends AbstractPage {
 
-    @FindBy(xpath = "(.//a[contains(@accesskey,'z')])[1]")
+    @FindBy(xpath = "(.//div[@class='tF2Cxc'])[1]")
     private WebElement firstSearchResultLink;
 
     public WikipediaGoogleSearchResultsPage(WebDriver driver) {
@@ -15,8 +16,11 @@ public class WikipediaGoogleSearchResultsPage extends AbstractPage {
     }
 
     public String searchResultsForWikipediaPageURL() {
-
         return driver.getCurrentUrl();
+    }
+
+    public String searchFirstLinkName() {
+    return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML;", firstSearchResultLink);
     }
 
     public String wikipediaPageTitle() {
@@ -32,7 +36,7 @@ public class WikipediaGoogleSearchResultsPage extends AbstractPage {
     }
 
     public WikipediaGoogleSearchResultsPage openFirstSearchResultLink() {
-        firstSearchResultLink.click();
+        firstSearchResultLink.submit();
         return this;
     }
 }

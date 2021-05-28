@@ -4,15 +4,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pageobject.abstractPage.AbstractPage;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 
 public class WikipediaHomePage extends AbstractPage {
-    private static final String WIKIPEDIA_HOMEPAGE_URL = "https://ru.wikipedia.org";
+    private static final String WIKIPEDIA_HOMEPAGE_URL = "https://en.wikipedia.org";
 
     @FindBy(name = "search")
     private WebElement wikipediaSearchInput;
 
     @FindBy(xpath = "//div[contains(@id,'dyk')]//img")
-    private WebElement screenshotOfTheFirstDYKSectionElement;
+    public WebElement screenshotOfTheFirstDYKSectionElement;
 
     public WikipediaHomePage(WebDriver driver) {
         super(driver);
@@ -23,14 +30,21 @@ public class WikipediaHomePage extends AbstractPage {
         return this;
     }
 
+    public String wikipediaHomePageTitle() {
+        return driver.getTitle();
+    }
+
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
         wikipediaSearchInput.sendKeys(searchWikiTerm);
-        wikipediaSearchInput.click();
+        wikipediaSearchInput.submit();
 
         return new WikipediaSearchForTestAutomationResultsPage(driver);
     }
+    public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() throws IOException {
+    WebElement element = screenshotOfTheFirstDYKSectionElement;
+    Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+        ImageIO.write(screenshot.getImage(), "jpg", new File("target\\ElementScreenshot.jpg"));
 
-    public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() {
         return screenshotOfTheFirstDYKSectionElement.getSize().getWidth();
     }
 }

@@ -11,9 +11,9 @@ public class WikipediaGoogleSearchResultTest extends BaseTest {
         String wikipediaGoogleSearchResult = new GoogleHomePage(driver)
                 .openGooglePage()
                 .searchForTerms("wikipedia")
-                .searchResultsForWikipediaPageURL();
+                .searchFirstLinkName();
 
-        logger.info(String.format("The current page URL: %s", wikipediaGoogleSearchResult));
-        Assert.assertTrue(wikipediaGoogleSearchResult.contains("wikipedia.org"), "Google search result page does NOT contain 'wikipedia.org' text");
+        logger.info(String.format("Wikipedia Google search result page URL : %s", wikipediaGoogleSearchResult));
+        Assert.assertTrue(wikipediaGoogleSearchResult.contains("wikipedia.org"), "Google search result page does not contain 'wikipedia.org' text");
     }
 }
