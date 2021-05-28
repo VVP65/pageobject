@@ -40,9 +40,10 @@ public class WikipediaHomePage extends AbstractPage {
 
         return new WikipediaSearchForTestAutomationResultsPage(driver);
     }
+
     public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() throws IOException {
-    WebElement element = screenshotOfTheFirstDYKSectionElement;
-    Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+        WebElement element = screenshotOfTheFirstDYKSectionElement;
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
         ImageIO.write(screenshot.getImage(), "jpg", new File("target\\ElementScreenshot.jpg"));
 
         return screenshotOfTheFirstDYKSectionElement.getSize().getWidth();

@@ -20,7 +20,7 @@ public class WikipediaGoogleSearchResultsPage extends AbstractPage {
     }
 
     public String searchFirstLinkName() {
-    return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML;", firstSearchResultLink);
+        return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML;", firstSearchResultLink);
     }
 
     public String wikipediaPageTitle() {
