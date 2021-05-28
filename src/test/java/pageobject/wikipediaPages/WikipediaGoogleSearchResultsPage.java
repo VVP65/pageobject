@@ -37,6 +37,7 @@ public class WikipediaGoogleSearchResultsPage extends AbstractPage {
 
     public WikipediaGoogleSearchResultsPage openFirstSearchResultLink() {
         firstSearchResultLink.submit();
+
         return this;
     }
 }
