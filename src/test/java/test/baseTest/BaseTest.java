@@ -12,8 +12,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class BaseTest {
-    protected static final int WAIT_FOR_LOAD = 5;
-
     protected Logger logger = Logger.getGlobal();
 
     protected WebDriver driver;
