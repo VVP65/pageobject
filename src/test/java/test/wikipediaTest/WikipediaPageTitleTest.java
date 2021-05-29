@@ -1,4 +1,4 @@
-package test.wikipediaTests;
+package test.wikipediaTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

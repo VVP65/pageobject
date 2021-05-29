@@ -1,4 +1,4 @@
-package test.googleTests;
+package test.googleTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
