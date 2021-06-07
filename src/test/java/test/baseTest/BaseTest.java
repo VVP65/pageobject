@@ -20,13 +20,13 @@ public class BaseTest {
     @Parameters("browser")
     public void setup(@Optional("Chrome") String browser) throws Exception {
         if (browser.equalsIgnoreCase("Firefox")) {
-            System.setProperty("webdriver.geco.driver", "src\\test\\java\\test\\resources\\webdrivers\\gecodriver.exe");
+            System.setProperty("webdriver.geco.driver", "src\\test\\resources\\webdrivers\\gecodriver.exe");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("Chrome")) {
-            System.setProperty("webdriver.chrome.driver", "src\\test\\java\\test\\resources\\webdrivers\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdrivers\\chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("Edge")) {
-            System.setProperty("webdriver.edge.driver", "src\\test\\java\\test\\resources\\webdrivers\\msedgedriver.exe");
+            System.setProperty("webdriver.edge.driver", "src\\test\\resources\\webdrivers\\msedgedriver.exe");
             driver = new EdgeDriver();
         } else {
             throw new Exception("Browser is not correct");
