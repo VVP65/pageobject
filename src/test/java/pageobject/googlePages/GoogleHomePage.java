@@ -21,7 +21,7 @@ public class GoogleHomePage extends AbstractPage {
 
     public GoogleHomePage openGooglePage() {
         openPage(GOOGLE_HOMEPAGE_URL);
-        
+
         return this;
     }
 
