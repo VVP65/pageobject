@@ -14,7 +14,7 @@ public abstract class AbstractPage {
         PageFactory.initElements(driver, this);
     }
 
-    public static void waiter(WebDriver driver) {
+    protected static void waiter(WebDriver driver) {
 
         ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
