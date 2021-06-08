@@ -6,10 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public abstract class AbstractPage {
+public abstract class BasePage {
     protected WebDriver driver;
 
-    protected AbstractPage(WebDriver driver) {
+    protected BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

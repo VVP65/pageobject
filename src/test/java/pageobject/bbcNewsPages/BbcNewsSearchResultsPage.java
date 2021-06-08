@@ -4,9 +4,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageobject.abstractPage.AbstractPage;
+import pageobject.abstractPage.BasePage;
 
-public class BbcNewsSearchResultsPage extends AbstractPage {
+public class BbcNewsSearchResultsPage extends BasePage {
     @FindBy(xpath = "(.//div[@class='ssrcss-8f38wz-PromoPortrait-PromoSwitchLayoutAtBreakpoints e3z3r3u0'])[1]")
     private WebElement firstBbcNewsSearchResultLink;
 

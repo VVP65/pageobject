@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pageobject.wikipediaPages.WikipediaGoogleSearchResultsPage;
-import pageobject.abstractPage.AbstractPage;
+import pageobject.abstractPage.BasePage;
 
-public class GoogleHomePage extends AbstractPage {
+public class GoogleHomePage extends BasePage {
     private static final String GOOGLE_HOMEPAGE_URL = "https://google.com";
 
     @FindBy(name = "q")

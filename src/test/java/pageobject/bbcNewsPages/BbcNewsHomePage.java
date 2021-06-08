@@ -3,9 +3,9 @@ package pageobject.bbcNewsPages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageobject.abstractPage.AbstractPage;
+import pageobject.abstractPage.BasePage;
 
-public class BbcNewsHomePage extends AbstractPage {
+public class BbcNewsHomePage extends BasePage {
     private static final String BBC_NEWS_HOMEPAGE_URL = "https://www.bbc.com/news";
 
     @FindBy(xpath = ".//input[@id='orb-search-q']")

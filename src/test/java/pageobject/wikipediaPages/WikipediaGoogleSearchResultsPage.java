@@ -4,9 +4,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageobject.abstractPage.AbstractPage;
+import pageobject.abstractPage.BasePage;
 
-public class WikipediaGoogleSearchResultsPage extends AbstractPage {
+public class WikipediaGoogleSearchResultsPage extends BasePage {
     @FindBy(xpath = "(.//div[@class='tF2Cxc'])[1]")
     private WebElement firstSearchResultLink;
 

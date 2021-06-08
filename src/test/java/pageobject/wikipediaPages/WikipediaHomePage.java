@@ -3,7 +3,7 @@ package pageobject.wikipediaPages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageobject.abstractPage.AbstractPage;
+import pageobject.abstractPage.BasePage;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
-public class WikipediaHomePage extends AbstractPage {
+public class WikipediaHomePage extends BasePage {
     private static final String WIKIPEDIA_HOMEPAGE_URL = "https://en.wikipedia.org";
 
     @FindBy(name = "search")
