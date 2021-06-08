@@ -33,9 +33,9 @@ public class BaseTest {
         }
     }
 
-    @AfterClass(alwaysRun = true)
-    public void browserTearDown() {
-        driver.quit();
-        driver = null;
-    }
+//    @AfterClass(alwaysRun = true)
+//    public void browserTearDown() {
+//        driver.quit();
+//        driver = null;
+//    }
 }
