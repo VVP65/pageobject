@@ -1,9 +1,9 @@
-package test.bbcNewsTest;
+package tests.bbcNewsTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.bbcNewsPages.BbcNewsHomePage;
-import test.baseTest.BaseTest;
+import tests.baseTest.BaseTest;
 
 public class BbcNewsSearchResultsPageLengthTest extends BaseTest {
     @Test

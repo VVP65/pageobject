@@ -1,9 +1,9 @@
-package test.googleTest;
+package tests.googleTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.googlePages.GoogleHomePage;
-import test.baseTest.BaseTest;
+import tests.baseTest.BaseTest;
 
 public class WikipediaGoogleSearchResultsPageLengthTest extends BaseTest {
     @Test
