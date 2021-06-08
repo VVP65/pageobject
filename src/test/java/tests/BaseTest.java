@@ -1,4 +1,4 @@
-package tests.baseTest;
+package tests;
 
 import java.util.logging.Logger;
 

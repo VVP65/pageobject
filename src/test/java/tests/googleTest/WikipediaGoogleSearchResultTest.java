@@ -3,7 +3,7 @@ package tests.googleTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.googlePages.GoogleHomePage;
-import tests.baseTest.BaseTest;
+import tests.BaseTest;
 
 public class WikipediaGoogleSearchResultTest extends BaseTest {
     @Test

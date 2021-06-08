@@ -3,7 +3,7 @@ package tests.wikipediaTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.wikipediaPages.WikipediaHomePage;
-import tests.baseTest.BaseTest;
+import tests.BaseTest;
 
 import java.io.IOException;
 

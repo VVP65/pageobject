@@ -3,7 +3,7 @@ package tests.bbcNewsTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.bbcNewsPages.BbcNewsHomePage;
-import tests.baseTest.BaseTest;
+import tests.BaseTest;
 
 public class BbcNewsSearchResultsPageLengthTest extends BaseTest {
     @Test
