@@ -6,17 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class BaseTest {
     protected Logger logger = Logger.getGlobal();
 
     protected WebDriver driver;
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
     public void setup(@Optional("Chrome") String browser) throws Exception {
         if (browser.equalsIgnoreCase("Firefox")) {
@@ -33,9 +30,9 @@ public class BaseTest {
         }
     }
 
-//    @AfterClass(alwaysRun = true)
-//    public void browserTearDown() {
-//        driver.quit();
-//        driver = null;
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void browserTearDown() {
+        driver.quit();
+        driver = null;
+    }
 }
