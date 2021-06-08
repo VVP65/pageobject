@@ -1,4 +1,4 @@
-package pageobject.BasePage;
+package pageobject.basePage;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

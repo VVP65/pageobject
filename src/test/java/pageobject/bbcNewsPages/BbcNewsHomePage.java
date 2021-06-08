@@ -3,7 +3,7 @@ package pageobject.bbcNewsPages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageobject.BasePage.BasePage;
+import pageobject.basePage.BasePage;
 
 public class BbcNewsHomePage extends BasePage {
     private static final String BBC_NEWS_HOMEPAGE_URL = "https://www.bbc.com/news";

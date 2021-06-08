@@ -1,7 +1,7 @@
 package pageobject.wikipediaPages;
 
 import org.openqa.selenium.WebDriver;
-import pageobject.BasePage.BasePage;
+import pageobject.basePage.BasePage;
 
 public class WikipediaSearchForTestAutomationResultsPage extends BasePage {
     public WikipediaSearchForTestAutomationResultsPage(WebDriver driver) {
