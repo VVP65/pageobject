@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pageobject.wikipediaPages.WikipediaGoogleSearchResultsPage;
-import pageobject.abstractPage.BasePage;
+import pageobject.BasePage.BasePage;
 
 public class GoogleHomePage extends BasePage {
     private static final String GOOGLE_HOMEPAGE_URL = "https://google.com";
