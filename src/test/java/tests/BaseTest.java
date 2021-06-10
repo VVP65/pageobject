@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
-    public void setup(@Optional("Chrome") String browser) throws Exception {
+    public void setup(@Optional("Edge") String browser) throws Exception {
         if (browser.equalsIgnoreCase("Firefox")) {
             System.setProperty("webdriver.geco.driver", "src\\test\\resources\\webdrivers\\gecodriver.exe");
             driver = new FirefoxDriver();
