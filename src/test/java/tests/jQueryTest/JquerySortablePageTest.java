@@ -7,12 +7,12 @@ import tests.BaseTest;
 
 public class JquerySortablePageTest extends BaseTest {
     @Test
-    public void jquerySortablePage() throws InterruptedException {
+    public void jquerySortablePage() {
         String jquerySortablePage = new JquerySortablePage(driver)
                 .openJquerySortablePage()
                 .jQuerySortablePageResult();
 
-        logger.info(String.format("JQuery Sortable Page contains: %s", jquerySortablePage));
-        Assert.assertTrue(jquerySortablePage.contains("Item 2"), "Current element is absent in this list");
+        logger.info(String.format("Sortable list contains %s", jquerySortablePage));
+        Assert.assertTrue(jquerySortablePage.contains("Item 2"), "This element does not refer to 'Item 2'");
     }
 }

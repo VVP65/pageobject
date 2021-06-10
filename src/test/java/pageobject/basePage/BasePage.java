@@ -1,6 +1,5 @@
 package pageobject.basePage;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +15,6 @@ public abstract class BasePage {
     }
 
     protected static void waiter(WebDriver driver) {
-
         ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
                 return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
@@ -31,8 +29,5 @@ public abstract class BasePage {
         driver.get(url);
         driver.manage().window().maximize();
         waiter(driver);
-    }
-    protected void highlightElement(By locator) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid green'", driver.findElement(locator));
     }
 }
