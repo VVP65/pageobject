@@ -2,6 +2,7 @@ package pageobject.basePage;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,5 +30,10 @@ public abstract class BasePage {
         driver.get(url);
         driver.manage().window().maximize();
         waiter(driver);
+    }
+
+    protected void highlightElement(WebElement element) {
+        JavascriptExecutor javascript = ((JavascriptExecutor) driver);
+        javascript.executeScript("arguments[0].style.border='3px solid green'", element);
     }
 }

@@ -1,6 +1,5 @@
 package pageobject.jQuerySortablePage;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -31,8 +30,7 @@ public class JquerySortablePage extends BasePage {
 
     public String jQuerySortablePageResult() {
         driver.switchTo().frame(sortableListFrame);
-        JavascriptExecutor javascript = ((JavascriptExecutor) driver);
-        javascript.executeScript("arguments[0].style.border='3px solid green'", secondSortableElement);
+        highlightElement(secondSortableElement);
         new Actions(driver).dragAndDropBy(firstSortableElement, 8, 100).build().perform();
 
         return firstSortableElement.getText();
