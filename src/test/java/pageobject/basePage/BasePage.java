@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
     protected WebDriver driver;
+    protected static final int TIME_OUT_SECONDS = 20;
+    protected static final int X_OFF_SET = 8;
+    protected static final int Y_OFF_SET = 100;
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;
@@ -23,7 +26,7 @@ public abstract class BasePage {
             }
         };
 
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver, TIME_OUT_SECONDS);
         wait.until(pageLoadCondition);
     }
 
@@ -39,6 +42,6 @@ public abstract class BasePage {
     }
 
     protected void dragAndDropElementByCoordinates(WebElement element) {
-        new Actions(driver).dragAndDropBy(element, 8, 100).build().perform();
+        new Actions(driver).dragAndDropBy(element, X_OFF_SET,Y_OFF_SET).build().perform();
     }
 }
