@@ -10,7 +10,7 @@ public class JquerySortablePageTest extends BaseTest {
     public void jquerySortablePage() {
         String jquerySortablePage = new JquerySortablePage(driver)
                 .openJquerySortablePage()
-                .jQuerySortablePageResult();
+                .firstSortableElementText();
 
         logger.info(String.format("Sortable list contains %s", jquerySortablePage));
         Assert.assertTrue(jquerySortablePage.contains("Item 2"), "This element does not refer to 'Item 2'");

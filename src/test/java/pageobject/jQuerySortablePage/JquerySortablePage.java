@@ -27,7 +27,7 @@ public class JquerySortablePage extends BasePage {
         return this;
     }
 
-    public String jQuerySortablePageResult() {
+    public String firstSortableElementText() {
         driver.switchTo().frame(sortableListFrame);
         highlightElement(secondSortableElement);
         dragAndDropElementByCoordinates(firstSortableElement);
