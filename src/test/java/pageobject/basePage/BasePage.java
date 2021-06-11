@@ -3,6 +3,7 @@ package pageobject.basePage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,5 +36,9 @@ public abstract class BasePage {
     protected void highlightElement(WebElement element) {
         JavascriptExecutor javascript = ((JavascriptExecutor) driver);
         javascript.executeScript("arguments[0].style.border='3px solid green'", element);
+    }
+
+    protected void dragAndDropElementByCoordinates(WebElement element) {
+        new Actions(driver).dragAndDropBy(element, 8, 100).build().perform();
     }
 }
