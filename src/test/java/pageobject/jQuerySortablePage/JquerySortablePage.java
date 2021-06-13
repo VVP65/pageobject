@@ -14,7 +14,7 @@ import java.util.List;
 public class JquerySortablePage extends BasePage {
     private static final String JQUERY_SORTABLE_PAGE_URL = "https://jqueryui.com/sortable/#placeholder";
 
-    @FindBy(xpath = ".//iframe[@class='demo-frame']")
+    @FindBy(css = "#content > iframe")
     private WebElement sortableListFrame;
 
     @FindBy(css = "#sortable > li:nth-child(1)")
@@ -22,6 +22,9 @@ public class JquerySortablePage extends BasePage {
 
     @FindBy(css = "#sortable > li:nth-child(2)")
     private WebElement secondSortableElement;
+
+    @FindBy(css = "#menu-top > li:nth-child(8) > a")
+    private WebElement jQueryAboutSection;
 
 //    @FindAll({@FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")})
 //    private List<WebElement> sortableList;
@@ -43,5 +46,11 @@ public class JquerySortablePage extends BasePage {
         dragAndDropElementByCoordinates(firstSortableElement);
 
         return firstSortableElement.getText();
+    }
+
+    public String jQueryAboutSectionText() {
+        clickJqueryAboutSection(jQueryAboutSection);
+
+        return jQueryAboutSection.getText();
     }
 }

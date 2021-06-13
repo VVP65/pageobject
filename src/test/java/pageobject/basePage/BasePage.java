@@ -44,4 +44,8 @@ public abstract class BasePage {
     protected void dragAndDropElementByCoordinates(WebElement element) {
         new Actions(driver).dragAndDropBy(element, X_OFF_SET,Y_OFF_SET).build().perform();
     }
+
+    protected void clickJqueryAboutSection(WebElement element) {
+        new Actions(driver).click(element).build().perform();
+    }
 }
