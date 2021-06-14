@@ -25,6 +25,10 @@ public class GoogleHomePage extends BasePage {
         return this;
     }
 
+    public String GoogleHomePageTitle() {
+        return driver.getTitle();
+    }
+
     public WikipediaGoogleSearchResultsPage searchForTerms(String searchTerm) {
         googleSearchInput.sendKeys(searchTerm);
         googleSearchButton.submit();

@@ -36,6 +36,10 @@ public class JquerySortablePage extends BasePage {
         super(driver);
     }
 
+    public String jQuerySortablePageTitle() {
+        return driver.getTitle();
+    }
+
     public JquerySortablePage openJquerySortablePage() {
         openPage(JQUERY_SORTABLE_PAGE_URL);
 
