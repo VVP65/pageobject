@@ -26,6 +26,8 @@ public class JquerySortablePage extends BasePage {
     @FindBy(css = "#menu-top > li:nth-child(8) > a")
     private WebElement jQueryAboutSection;
 
+
+
 //    @FindAll({@FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")})
 //    private List<WebElement> sortableList;
 
@@ -50,6 +52,8 @@ public class JquerySortablePage extends BasePage {
 
     public String jQueryAboutSectionText() {
         clickJqueryAboutSection(jQueryAboutSection);
+        clickJqueryAboutSectionWithJavaScriptExecutor();
+
 
         return jQueryAboutSection.getText();
     }

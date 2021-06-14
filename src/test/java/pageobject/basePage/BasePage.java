@@ -41,6 +41,12 @@ public abstract class BasePage {
         javascript.executeScript("arguments[0].style.border='3px solid green'", element);
     }
 
+    protected void clickJqueryAboutSectionWithJavaScriptExecutor() {
+        JavascriptExecutor jsExec = ((JavascriptExecutor) driver);
+        jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
+    }
+
+
     protected void dragAndDropElementByCoordinates(WebElement element) {
         new Actions(driver).dragAndDropBy(element, X_OFF_SET,Y_OFF_SET).build().perform();
     }
