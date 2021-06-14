@@ -43,7 +43,7 @@ public class WikipediaHomePage extends BasePage {
     }
 
     public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() throws IOException {
-        Screenshot screenshotOfTheFirstDYKSectionElement = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+        Screenshot screenshotOfTheFirstDYKSectionElement = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, openWikipediaHomePage().screenshotOfTheFirstDYKSectionElement);
         ImageIO.write(screenshotOfTheFirstDYKSectionElement.getImage(), "jpg", new File("target\\ElementScreenshot.jpg"));
 
         return screenshotOfTheFirstDYKSectionElement.getImage().getWidth();

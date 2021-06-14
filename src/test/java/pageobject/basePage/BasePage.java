@@ -46,9 +46,8 @@ public abstract class BasePage {
         jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
     }
 
-
     protected void dragAndDropElementByCoordinates(WebElement element) {
-        new Actions(driver).dragAndDropBy(element, X_OFF_SET,Y_OFF_SET).build().perform();
+        new Actions(driver).dragAndDropBy(element, X_OFF_SET, Y_OFF_SET).build().perform();
     }
 
     protected void clickJqueryAboutSection(WebElement element) {
