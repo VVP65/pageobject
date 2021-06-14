@@ -17,10 +17,10 @@ public class SeleniumGridTest extends BaseTest {
     @Test
     public void seleniumGridTest() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setPlatform(Platform.WIN10);
+        capabilities.setPlatform(Platform.WINDOWS);
         capabilities.setBrowserName("chrome");
 
-        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444//wd/hub"), capabilities);
+        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.12:4444/wd/hub"), capabilities);
 
         String googleHomePageTitle = new GoogleHomePage(driver)
                 .openGooglePage()
