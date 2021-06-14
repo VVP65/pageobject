@@ -25,7 +25,7 @@ public class GoogleHomePage extends BasePage {
         return this;
     }
 
-    public String GoogleHomePageTitle() {
+    public String googleHomePageTitle() {
         return driver.getTitle();
     }
 

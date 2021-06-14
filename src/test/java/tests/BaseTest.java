@@ -7,9 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 public class BaseTest {
     protected Logger logger = Logger.getGlobal();
+
+    SoftAssert softAssertion = new SoftAssert();
 
     protected WebDriver driver;
 
@@ -30,9 +33,9 @@ public class BaseTest {
         }
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void browserTearDown() {
-//        driver.quit();
-//        driver = null;
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void browserTearDown() {
+        driver.quit();
+        driver = null;
+    }
 }

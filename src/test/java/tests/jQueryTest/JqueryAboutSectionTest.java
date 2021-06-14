@@ -14,6 +14,5 @@ public class JqueryAboutSectionTest extends BaseTest {
 
         logger.info(String.format("JQuery About section contains", jqueryAboutSection));
         Assert.assertTrue(jqueryAboutSection.contains("About"), "This section does not contain 'About'");
-
     }
 }
