@@ -41,7 +41,7 @@ public class JquerySortablePage extends BasePage {
 
     public String jQueryAboutSectionText() {
         clickJqueryAboutSection(jQueryAboutSection);
-        clickJqueryAboutSectionWithJavaScriptExecutor();
+        clickJqueryAboutSectionElementWithJavaScriptExecutor();
 
         return jQueryAboutSection.getText();
     }

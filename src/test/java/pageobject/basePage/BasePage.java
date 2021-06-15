@@ -46,7 +46,7 @@ public abstract class BasePage {
         javascript.executeScript("arguments[0].style.border='3px solid green'", element);
     }
 
-    protected void clickJqueryAboutSectionWithJavaScriptExecutor() {
+    protected void clickJqueryAboutSectionElementWithJavaScriptExecutor() {
         JavascriptExecutor jsExec = ((JavascriptExecutor) driver);
         jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
     }
