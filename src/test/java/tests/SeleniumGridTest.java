@@ -7,7 +7,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.googlePages.GoogleHomePage;
-import pageobject.jQuerySortablePage.JquerySortablePage;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -19,12 +18,13 @@ public class SeleniumGridTest extends BaseTest {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setPlatform(Platform.WINDOWS);
         capabilities.setBrowserName("chrome");
-
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.12:4444/wd/hub"), capabilities);
 
         String googleHomePageTitle = new GoogleHomePage(driver)
                 .openGooglePage()
                 .googleHomePageTitle();
+
+        driver.quit();
 
         logger.info(String.format("Google Home Page Title: %s", googleHomePageTitle));
         Assert.assertTrue(googleHomePageTitle.contains("Google"), "Current page does not belong to Google Home Page");

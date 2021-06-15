@@ -4,15 +4,20 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public abstract class BasePage {
     protected WebDriver driver;
     protected static final int TIME_OUT_SECONDS = 20;
-    protected static final int X_OFF_SET = 8;
-    protected static final int Y_OFF_SET = 100;
+
+    @FindAll({@FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")})
+    public List<WebElement> sortableList;
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;
@@ -46,8 +51,13 @@ public abstract class BasePage {
         jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
     }
 
-    protected void dragAndDropElementByCoordinates(WebElement element) {
-        new Actions(driver).dragAndDropBy(element, X_OFF_SET, Y_OFF_SET).build().perform();
+    protected void dragAndDropElementByCoordinates() {
+        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(0)).build().perform();
+        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(1)).build().perform();
+        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(2)).build().perform();
+        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(3)).build().perform();
+        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(4)).build().perform();
+        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(5)).build().perform();
     }
 
     protected void clickJqueryAboutSection(WebElement element) {
