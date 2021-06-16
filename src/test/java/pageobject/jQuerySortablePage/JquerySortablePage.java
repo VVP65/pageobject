@@ -3,7 +3,6 @@ package pageobject.jQuerySortablePage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import pageobject.basePage.BasePage;
@@ -43,24 +42,24 @@ public class JquerySortablePage extends BasePage {
         jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
     }
 
-    protected void dragAndDropElementByCoordinates() {
+    public JquerySortablePage dragAndDropSortableElementsWithCoordinates() {
         for (int i = 0; i < sortableList.size() - 1; i++) {
-            new Actions(driver).dragAndDropBy(sortableList.get(0), X_OFF_SET, Y_OFF_SET - i * Y_OFF_DELTA).build().perform();
-            waiter(driver);
+            dragAndDropElementWithCoordinates(firstSortableElement, X_OFF_SET, Y_OFF_SET - i * Y_OFF_DELTA);
         }
+        return this;
     }
 
     public JquerySortablePage highlightSortablePageElement() {
         driver.switchTo().frame(sortableListFrame);
         waitForElementVisibility(firstSortableElement);
         highlightElement(firstSortableElement);
+        waitForElementVisibility(firstSortableElement);
 
         return this;
     }
 
     public String getFirstSortableElementText() {
-        waitForElementVisibility(firstSortableElement);
-        dragAndDropElementByCoordinates();
+        dragAndDropSortableElementsWithCoordinates();
 
         return firstSortableElement.getText();
     }

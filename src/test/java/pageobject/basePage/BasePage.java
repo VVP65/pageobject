@@ -52,4 +52,8 @@ public abstract class BasePage {
     public String getPageTitle() {
         return driver.getTitle();
     }
+
+    protected void dragAndDropElementWithCoordinates(WebElement source, int xOffset, int yOffset) {
+        new Actions(driver).dragAndDropBy(source, xOffset, yOffset).build().perform();
+    }
 }
