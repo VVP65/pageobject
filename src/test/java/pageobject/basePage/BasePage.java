@@ -19,6 +19,10 @@ public abstract class BasePage {
     @FindAll({@FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")})
     public List<WebElement> sortableList;
 
+    protected static final int X_OFF_SET = 0;
+    protected static final int Y_OFF_SET = 283;
+    protected static final int Y_OFF_DELTA = 44;
+
     protected BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -52,12 +56,10 @@ public abstract class BasePage {
     }
 
     protected void dragAndDropElementByCoordinates() {
-        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(0)).build().perform();
-        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(1)).build().perform();
-        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(2)).build().perform();
-        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(3)).build().perform();
-        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(4)).build().perform();
-        new Actions(driver).dragAndDrop(sortableList.get(6), sortableList.get(5)).build().perform();
+        for (int i = 0; i < sortableList.size() - 1; i++) {
+            new Actions(driver).dragAndDropBy(sortableList.get(0), X_OFF_SET, Y_OFF_SET - i * Y_OFF_DELTA).build().perform();
+            waiter(driver);
+        }
     }
 
     protected void clickJqueryAboutSection(WebElement element) {
