@@ -16,13 +16,13 @@ public class JquerySortablePage extends BasePage {
     protected static final int Y_OFF_SET = 283;
     protected static final int Y_OFF_DELTA = 44;
 
-    @FindBy(css = "#content > iframe")
+    @FindBy(xpath = ".//iframe[@class='demo-frame']")
     private WebElement sortableListFrame;
 
-    @FindBy(css = "#sortable > li:nth-child(1)")
+    @FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")
     private WebElement firstSortableElement;
 
-    @FindBy(css = "#menu-top > li:nth-child(8) > a")
+    @FindBy(xpath = ".//a[@href='https://jqueryui.com/about/']")
     private WebElement jQueryAboutSection;
 
     @FindAll({@FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")})
@@ -37,6 +37,7 @@ public class JquerySortablePage extends BasePage {
 
         return this;
     }
+
     protected void clickJqueryAboutSectionElementWithJavaScriptExecutor() {
         JavascriptExecutor jsExec = ((JavascriptExecutor) driver);
         jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
@@ -49,12 +50,17 @@ public class JquerySortablePage extends BasePage {
         }
     }
 
-    public void highlightSortablePageElement() {
-       highlightElement(firstSortableElement);
+    public JquerySortablePage highlightSortablePageElement() {
+        waitForElementVisibility(firstSortableElement);
+        highlightElement(firstSortableElement);
+
+        return this;
     }
 
     public String getFirstSortableElementText() {
+        waitForElementVisibility(sortableListFrame);
         driver.switchTo().frame(sortableListFrame);
+        waitForElementVisibility(firstSortableElement);
         dragAndDropElementByCoordinates();
 
         return firstSortableElement.getText();

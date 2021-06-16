@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
@@ -26,6 +27,11 @@ public abstract class BasePage {
 
         WebDriverWait wait = new WebDriverWait(driver, TIME_OUT_SECONDS);
         wait.until(pageLoadCondition);
+    }
+
+    protected boolean waitForElementVisibility(WebElement element) {
+        new WebDriverWait(driver, TIME_OUT_SECONDS).until(ExpectedConditions.visibilityOf(element));
+        return element.isEnabled();
     }
 
     protected void openPage(String url) {
