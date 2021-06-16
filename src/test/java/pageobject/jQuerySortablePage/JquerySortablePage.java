@@ -12,9 +12,9 @@ import java.util.List;
 
 public class JquerySortablePage extends BasePage {
     private static final String JQUERY_SORTABLE_PAGE_URL = "https://jqueryui.com/sortable/#placeholder";
-    protected static final int X_OFF_SET = 0;
-    protected static final int Y_OFF_SET = 283;
-    protected static final int Y_OFF_DELTA = 44;
+    private static final int X_OFF_SET = 0;
+    private static final int Y_OFF_SET = 283;
+    private static final int Y_OFF_DELTA = 44;
 
     @FindBy(xpath = ".//iframe[@class='demo-frame']")
     private WebElement sortableListFrame;
