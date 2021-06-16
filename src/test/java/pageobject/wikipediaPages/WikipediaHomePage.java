@@ -31,10 +31,6 @@ public class WikipediaHomePage extends BasePage {
         return this;
     }
 
-    public String wikipediaHomePageTitle() {
-        return driver.getTitle();
-    }
-
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
         wikipediaSearchInput.sendKeys(searchWikiTerm);
         wikipediaSearchInput.submit();

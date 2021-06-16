@@ -22,7 +22,7 @@ public class SeleniumGridTest extends BaseTest {
 
         String googleHomePageTitle = new GoogleHomePage(driver)
                 .openGooglePage()
-                .getGoogleHomePageTitle();
+                .getPageTitle();
 
         logger.info(String.format("Google Home Page Title: %s", googleHomePageTitle));
         Assert.assertTrue(googleHomePageTitle.contains("Google"), "Current page does not belong to Google Home Page");

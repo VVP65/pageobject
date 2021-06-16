@@ -24,9 +24,9 @@ public class BbcNewsHomePage extends BasePage {
         return this;
     }
 
-    public String bbcNewsHomePageTitle() {
-        return driver.getTitle();
-    }
+//    public String bbcNewsHomePageTitle() {
+//        return driver.getTitle();
+//    }
 
     public BbcNewsSearchResultsPage searchForTerms(String searchTerm) {
         bbcNewsSearchInput.sendKeys(searchTerm);

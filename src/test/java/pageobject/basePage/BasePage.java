@@ -42,4 +42,8 @@ public abstract class BasePage {
     protected void clickJqueryAboutSection(WebElement element) {
         new Actions(driver).click(element).build().perform();
     }
+
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
 }

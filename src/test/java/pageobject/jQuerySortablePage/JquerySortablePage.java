@@ -32,10 +32,6 @@ public class JquerySortablePage extends BasePage {
         super(driver);
     }
 
-    public String jQuerySortablePageTitle() {
-        return driver.getTitle();
-    }
-
     public JquerySortablePage openJquerySortablePage() {
         openPage(JQUERY_SORTABLE_PAGE_URL);
 
@@ -53,9 +49,12 @@ public class JquerySortablePage extends BasePage {
         }
     }
 
+    public void highlightSortablePageElement() {
+       highlightElement(firstSortableElement);
+    }
+
     public String getFirstSortableElementText() {
         driver.switchTo().frame(sortableListFrame);
-        highlightElement(firstSortableElement);
         dragAndDropElementByCoordinates();
 
         return firstSortableElement.getText();
