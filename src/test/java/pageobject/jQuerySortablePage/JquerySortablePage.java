@@ -51,6 +51,7 @@ public class JquerySortablePage extends BasePage {
     }
 
     public JquerySortablePage highlightSortablePageElement() {
+        driver.switchTo().frame(sortableListFrame);
         waitForElementVisibility(firstSortableElement);
         highlightElement(firstSortableElement);
 
@@ -58,8 +59,6 @@ public class JquerySortablePage extends BasePage {
     }
 
     public String getFirstSortableElementText() {
-        waitForElementVisibility(sortableListFrame);
-        driver.switchTo().frame(sortableListFrame);
         waitForElementVisibility(firstSortableElement);
         dragAndDropElementByCoordinates();
 

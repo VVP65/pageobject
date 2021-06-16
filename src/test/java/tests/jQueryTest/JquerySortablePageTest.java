@@ -10,6 +10,7 @@ public class JquerySortablePageTest extends BaseTest {
     public void checkPageElementsAfterSorting() {
         String firstSortableElementText = new JquerySortablePage(driver)
                 .openJquerySortablePage()
+                .highlightSortablePageElement()
                 .getFirstSortableElementText();
 
         logger.info(String.format("Sortable list contains %s", firstSortableElementText));
