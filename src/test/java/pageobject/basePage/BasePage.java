@@ -45,7 +45,7 @@ public abstract class BasePage {
         javascript.executeScript("arguments[0].style.border='3px solid green'", element);
     }
 
-    protected void clickJqueryAboutSection(WebElement element) {
+    protected void clickWebElementUsingActions(WebElement element) {
         new Actions(driver).click(element).build().perform();
     }
 
