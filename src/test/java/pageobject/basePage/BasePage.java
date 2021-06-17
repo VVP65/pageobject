@@ -31,6 +31,7 @@ public abstract class BasePage {
 
     protected boolean waitForElementVisibility(WebElement element) {
         new WebDriverWait(driver, TIME_OUT_SECONDS).until(ExpectedConditions.visibilityOf(element));
+
         return element.isEnabled();
     }
 
