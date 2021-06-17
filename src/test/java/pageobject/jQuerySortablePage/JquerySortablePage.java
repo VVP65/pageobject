@@ -25,7 +25,7 @@ public class JquerySortablePage extends BasePage {
     private WebElement jQueryAboutSection;
 
     @FindAll({@FindBy(xpath = "//li[@class='ui-state-default ui-sortable-handle']")})
-    public List<WebElement> sortableList;
+    private List<WebElement> sortableList;
 
     public JquerySortablePage(WebDriver driver) {
         super(driver);
