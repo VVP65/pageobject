@@ -46,6 +46,7 @@ public class JquerySortablePage extends BasePage {
         for (int i = 0; i < sortableList.size() - 1; i++) {
             dragAndDropElementWithCoordinates(sortableList.get(0), X_OFF_SET, Y_OFF_SET - i * Y_OFF_DELTA);
         }
+
         return this;
     }
 
