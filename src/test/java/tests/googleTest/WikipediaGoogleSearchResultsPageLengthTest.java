@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class WikipediaGoogleSearchResultsPageLengthTest extends BaseTest {
     @Test
-    public void wikipediaGoogleSearchResultsPageLength() {
+    public void getWikipediaGoogleSearchResultsPageLength() {
         int wikipediaGoogleSearchResultPageLength = new GoogleHomePage(driver)
                 .openGooglePage()
                 .searchForTerms("wikipedia")

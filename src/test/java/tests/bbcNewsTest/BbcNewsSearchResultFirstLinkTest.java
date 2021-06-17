@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class BbcNewsSearchResultFirstLinkTest extends BaseTest {
     @Test
-    public void bbcNewsSearchResultFirstLink() {
+    public void getBbcNewsSearchResultFirstLink() {
         String bbcNewsSearchResultFirstLinkTest = new BbcNewsHomePage(driver)
                 .openBbcNewsHomePage()
                 .searchForTerms("Ukraine")

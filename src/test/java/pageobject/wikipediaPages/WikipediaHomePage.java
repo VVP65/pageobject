@@ -31,10 +31,6 @@ public class WikipediaHomePage extends BasePage {
         return this;
     }
 
-    public String wikipediaHomePageTitle() {
-        return driver.getTitle();
-    }
-
     public WikipediaSearchForTestAutomationResultsPage wikipediaSearchForTerms(String searchWikiTerm) {
         wikipediaSearchInput.sendKeys(searchWikiTerm);
         wikipediaSearchInput.submit();
@@ -43,10 +39,9 @@ public class WikipediaHomePage extends BasePage {
     }
 
     public int getImageWidthForScreenshotOfTheFirstDYKSectionElement() throws IOException {
-        WebElement element = screenshotOfTheFirstDYKSectionElement;
-        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
-        ImageIO.write(screenshot.getImage(), "jpg", new File("target\\ElementScreenshot.jpg"));
+        Screenshot screenshotOfTheFirstDYKSectionElement = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, openWikipediaHomePage().screenshotOfTheFirstDYKSectionElement);
+        ImageIO.write(screenshotOfTheFirstDYKSectionElement.getImage(), "jpg", new File("target\\ElementScreenshot.jpg"));
 
-        return screenshotOfTheFirstDYKSectionElement.getSize().getWidth();
+        return screenshotOfTheFirstDYKSectionElement.getImage().getWidth();
     }
 }
