@@ -8,7 +8,7 @@ import pageobject.wikipediaPages.WikipediaHomePage;
 
 public class NavigationTest extends BaseTest {
     @Test
-    public void navigationAndVerifyTest() {
+    public void pagesNavigationAndVerificationCheck() {
 
         String googleHomePageTitle = new GoogleHomePage(driver)
                 .openGooglePage()

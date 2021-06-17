@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class BbcNewsSearchResultsPageLengthTest extends BaseTest {
     @Test
-    public void bbcNewsSearchResultsPageLength(){
+    public void getBbcNewsSearchResultsPageLength(){
         int bbcNewsSearchResultsPageLength = new BbcNewsHomePage(driver)
                 .openBbcNewsHomePage()
                 .searchForTerms("Ukraine")

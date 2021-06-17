@@ -14,7 +14,7 @@ import java.net.URL;
 public class SeleniumGridTest extends BaseTest {
 
     @Test
-    public void seleniumGridTest() throws MalformedURLException {
+    public void seleniumGridWorkingCapacityCheck() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setPlatform(Platform.WINDOWS);
         capabilities.setBrowserName("chrome");

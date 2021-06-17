@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class WikipediaGoogleSearchResultTest extends BaseTest {
     @Test
-    public void wikipediaGoogleSearchResultTest() {
+    public void getWikipediaGoogleSearchResultTest() {
         String wikipediaGoogleSearchResult = new GoogleHomePage(driver)
                 .openGooglePage()
                 .searchForTerms("wikipedia")
