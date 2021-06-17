@@ -58,7 +58,9 @@ public abstract class BasePage {
         return driver.getTitle();
     }
 
-    protected void dragAndDropElementWithCoordinates(WebElement source, int xOffset, int yOffset) {
+    protected BasePage dragAndDropElementWithCoordinates(WebElement source, int xOffset, int yOffset) {
         new Actions(driver).dragAndDropBy(source, xOffset, yOffset).build().perform();
+
+        return this;
     }
 }
