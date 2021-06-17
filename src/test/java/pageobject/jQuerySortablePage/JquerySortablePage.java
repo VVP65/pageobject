@@ -42,9 +42,9 @@ public class JquerySortablePage extends BasePage {
         jsExec.executeScript("document.getElementById('alex-dovenmuehle').click()");
     }
 
-    public JquerySortablePage dragAndDropSortableElementsWithCoordinates() {
+    public JquerySortablePage dragAndDropSortableListElementsWithCoordinates() {
         for (int i = 0; i < sortableList.size() - 1; i++) {
-            dragAndDropElementWithCoordinates(firstSortableElement, X_OFF_SET, Y_OFF_SET - i * Y_OFF_DELTA);
+            dragAndDropElementWithCoordinates(sortableList.get(0), X_OFF_SET, Y_OFF_SET - i * Y_OFF_DELTA);
         }
         return this;
     }
@@ -59,7 +59,7 @@ public class JquerySortablePage extends BasePage {
     }
 
     public String getFirstSortableElementText() {
-        dragAndDropSortableElementsWithCoordinates();
+        dragAndDropSortableListElementsWithCoordinates();
 
         return firstSortableElement.getText();
     }
