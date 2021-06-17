@@ -41,13 +41,17 @@ public abstract class BasePage {
         waiter(driver);
     }
 
-    protected void highlightElement(WebElement element) {
+    protected BasePage highlightElement(WebElement element) {
         JavascriptExecutor javascript = ((JavascriptExecutor) driver);
         javascript.executeScript("arguments[0].style.border='3px solid green'", element);
+
+        return this;
     }
 
-    protected void clickWebElementUsingActions(WebElement element) {
+    protected BasePage clickWebElementUsingActions(WebElement element) {
         new Actions(driver).click(element).build().perform();
+
+        return this;
     }
 
     public String getPageTitle() {
