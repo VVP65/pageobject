@@ -54,7 +54,6 @@ public class JquerySortablePage extends BasePage {
         driver.switchTo().frame(sortableListFrame);
         waitForElementVisibility(firstSortableElement);
         highlightElement(firstSortableElement);
-        waitForElementVisibility(firstSortableElement);
 
         return this;
     }
