@@ -8,6 +8,8 @@ import pageobject.basePage.BasePage;
 
 public class GoogleHomePage extends BasePage {
     private static final String GOOGLE_HOMEPAGE_URL = "https://google.com";
+    public static final String HTTPS_GOOGLE_HOMEPAGE_URL = "testdata.https.google.homepage.url";
+    public static final String HTTP_GOOGLE_HOMEPAGE_URL = "testdata.http.google.homepage.url";
 
     @FindBy(name = "q")
     private WebElement googleSearchInput;

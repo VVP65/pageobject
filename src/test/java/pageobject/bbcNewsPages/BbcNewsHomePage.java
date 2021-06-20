@@ -7,6 +7,9 @@ import pageobject.basePage.BasePage;
 
 public class BbcNewsHomePage extends BasePage {
     private static final String BBC_NEWS_HOMEPAGE_URL = "https://www.bbc.com/news";
+    private static final String HTTPS_BBC_NEWS_HOMEPAGE_URL = "testdata.https.bbc.news.homepage.url";
+    private static final String HTTP_BBC_NEWS_HOMEPAGE_URL = "testdata.http.bbc.news.homepage.url";
+
 
     @FindBy(xpath = ".//input[@id='orb-search-q']")
     private WebElement bbcNewsSearchInput;

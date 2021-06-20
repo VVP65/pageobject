@@ -14,6 +14,8 @@ import java.io.IOException;
 
 public class WikipediaHomePage extends BasePage {
     private static final String WIKIPEDIA_HOMEPAGE_URL = "https://en.wikipedia.org";
+    private static final String HTTPS_WIKIPEDIA_HOMEPAGE_URL ="testdata.https.wikipedia.homepage.url";
+    private static final String HTTP_WIKIPEDIA_HOMEPAGE_URL ="testdata.http.wikipedia.homepage.url";
 
     @FindBy(name = "search")
     private WebElement wikipediaSearchInput;
