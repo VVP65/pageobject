@@ -9,7 +9,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
+import utils.TestListener;
 
+@Listeners({TestListener.class})
 public class BaseTest {
     protected Logger logger = Logger.getGlobal();
 

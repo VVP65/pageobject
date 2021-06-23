@@ -1,23 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Page Object and Page Factory patterns tests suite" verbose="1" parallel="tests" thread-count="4">
+<suite name="Page Object and Page Factory patterns tests suite" verbose="5">
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome"/>
+        <parameter name="environment" value="dev"/>
         <classes>
-            <class name="tests.googleTest.WikipediaGoogleSearchResultsPageLengthTest">
+            <class name="tests.NavigationTest">
             </class>
         </classes>
     </test>
     <test name="FirefoxTest">
         <parameter name="browser" value="Firefox"/>
+        <parameter name="environment" value="dev"/>
         <classes>
-            <class name="tests.googleTest.WikipediaGoogleSearchResultsPageLengthTest">
+            <class name="tests.NavigationTest">
             </class>
         </classes>
     </test>
     <test name="EdgeTest">
         <parameter name="browser" value="Edge"/>
+        <parameter name="environment" value="dev"/>
         <classes>
-            <class name="tests.googleTest.WikipediaGoogleSearchResultsPageLengthTest">
+            <class name="tests.NavigationTest">
             </class>
         </classes>
     </test>
