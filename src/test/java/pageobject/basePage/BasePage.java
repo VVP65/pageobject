@@ -35,8 +35,8 @@ public abstract class BasePage {
         return element.isEnabled();
     }
 
-    protected void openPage(String url) {
-        driver.get(url);
+    protected void openPage(String getTestData) {
+        driver.get(getTestData);
         driver.manage().window().maximize();
         waiter(driver);
     }
