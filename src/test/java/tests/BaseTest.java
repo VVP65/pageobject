@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import utils.TestListener;
 
-@Listeners({TestListener.class})
+//@Listeners({TestListener.class})
 public class BaseTest {
     protected Logger logger = Logger.getGlobal();
 

@@ -19,11 +19,7 @@ public abstract class BasePage {
     }
 
     protected static void waiter(WebDriver driver) {
-        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
+        ExpectedCondition<Boolean> pageLoadCondition = driver1 -> ((JavascriptExecutor) driver1).executeScript("return document.readyState").equals("complete");
 
         WebDriverWait wait = new WebDriverWait(driver, TIME_OUT_SECONDS);
         wait.until(pageLoadCondition);
