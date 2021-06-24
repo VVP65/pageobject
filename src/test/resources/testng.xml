@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Page Object and Page Factory patterns tests suite" verbose="5">
-    <test name="ChromeTest">
+    <test name="ChromeDevTest">
         <parameter name="browser" value="Chrome"/>
         <parameter name="environment" value="dev"/>
         <classes>
@@ -9,17 +9,9 @@
             </class>
         </classes>
     </test>
-    <test name="FirefoxTest">
+    <test name="FirefoxProdTest">
         <parameter name="browser" value="Firefox"/>
-        <parameter name="environment" value="dev"/>
-        <classes>
-            <class name="tests.NavigationTest">
-            </class>
-        </classes>
-    </test>
-    <test name="EdgeTest">
-        <parameter name="browser" value="Edge"/>
-        <parameter name="environment" value="dev"/>
+        <parameter name="environment" value="prod"/>
         <classes>
             <class name="tests.NavigationTest">
             </class>
