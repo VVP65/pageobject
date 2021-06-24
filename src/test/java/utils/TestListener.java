@@ -1,11 +1,11 @@
 package utils;
 
+import driver.DriverSingleton;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -17,8 +17,6 @@ import java.time.format.DateTimeFormatter;
 
 public class TestListener implements ITestListener {
     public static Logger log = LogManager.getRootLogger();
-
-    protected WebDriver driver;
 
     public void onTestStart(ITestResult iTestResult) {
     }
@@ -43,11 +41,12 @@ public class TestListener implements ITestListener {
     }
 
     public void saveScreenshot() {
-        File screenCapture = ((TakesScreenshot) driver)
+        File screenCapture = ((TakesScreenshot) DriverSingleton
+                .getDriver())
                 .getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(screenCapture, new File(
-                    "\\target\\"
+                    ".//target/"
                             + getCurrentTimeAsString() +
                             ".png"));
         } catch (IOException e) {

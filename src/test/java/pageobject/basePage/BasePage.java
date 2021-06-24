@@ -34,7 +34,6 @@ public abstract class BasePage {
 
     protected void openPage(String url) {
         driver.get(TestDataReader.getTestData(url));
-        driver.manage().window().maximize();
         waiter(driver);
     }
 
