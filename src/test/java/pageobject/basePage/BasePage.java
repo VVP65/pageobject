@@ -1,5 +1,6 @@
 package pageobject.basePage;
 
+import service.TestDataReader;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public abstract class BasePage {
+public abstract class BasePage extends TestDataReader {
     protected WebDriver driver;
     protected static final int TIME_OUT_SECONDS = 20;
 
@@ -31,8 +32,8 @@ public abstract class BasePage {
         return element.isEnabled();
     }
 
-    protected void openPage(String getTestData) {
-        driver.get(getTestData);
+    protected void openPage(String url) {
+        driver.get(getTestData(url));
         driver.manage().window().maximize();
         waiter(driver);
     }
