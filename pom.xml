@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -41,11 +41,11 @@
             <artifactId>ashot</artifactId>
             <version>1.5.4</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-api</artifactId>-->
+<!--            <version>1.7.30</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -56,15 +56,15 @@
             <artifactId>log4j-core</artifactId>
             <version>2.11.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.11.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.logging.log4j</groupId>-->
+<!--            <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--            <version>2.11.1</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.30</version>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>1.5.6</version>
         </dependency>
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
