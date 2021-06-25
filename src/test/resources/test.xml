@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Page Object and Page Factory patterns tests suite" verbose="5">
     <test name="ChromeDevTest">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="chrome"/>
         <parameter name="environment" value="dev"/>
         <classes>
             <class name="tests.NavigationTest">
@@ -10,7 +10,7 @@
         </classes>
     </test>
     <test name="FirefoxProdTest">
-        <parameter name="browser" value="Firefox"/>
+        <parameter name="browser" value="firefox"/>
         <parameter name="environment" value="prod"/>
         <classes>
             <class name="tests.NavigationTest">
