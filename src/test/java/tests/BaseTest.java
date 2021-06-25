@@ -16,7 +16,7 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeMethod()
     public void browserSetUp() {
         driver = DriverSingleton.getDriver();
     }
