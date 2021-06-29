@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import service.TestDataReader;
 
 public abstract class BasePage {
     protected WebDriver driver;
@@ -19,11 +20,7 @@ public abstract class BasePage {
     }
 
     protected static void waiter(WebDriver driver) {
-        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
+        ExpectedCondition<Boolean> pageLoadCondition = driver1 -> ((JavascriptExecutor) driver1).executeScript("return document.readyState").equals("complete");
 
         WebDriverWait wait = new WebDriverWait(driver, TIME_OUT_SECONDS);
         wait.until(pageLoadCondition);
@@ -36,8 +33,7 @@ public abstract class BasePage {
     }
 
     protected void openPage(String url) {
-        driver.get(url);
-        driver.manage().window().maximize();
+        driver.get(TestDataReader.getTestData(url));
         waiter(driver);
     }
 

@@ -12,7 +12,7 @@ public class WikipediaPageTitleTest extends BaseTest {
                 .openWikipediaHomePage()
                 .getPageTitle();
 
-        logger.info(String.format("Wiki Page Title: %s", wikipediaPageTitle));
+        log.info(String.format("Wiki Page Title: %s", wikipediaPageTitle));
         Assert.assertTrue(wikipediaPageTitle.contains("Wikipedia, the free encyclopedia"), "Current page does not belong to Wikipedia project");
     }
 }

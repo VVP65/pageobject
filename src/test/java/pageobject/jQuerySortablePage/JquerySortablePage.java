@@ -10,7 +10,7 @@ import pageobject.basePage.BasePage;
 import java.util.List;
 
 public class JquerySortablePage extends BasePage {
-    private static final String JQUERY_SORTABLE_PAGE_URL = "https://jqueryui.com/sortable/#placeholder";
+    private static final String JQUERY_SORTABLE_PAGE_URL = "testdata.jqueryui.sortable.page.url";
     private static final int X_OFF_SET = 0;
     private static final int Y_OFF_SET = 283;
     private static final int Y_OFF_DELTA = 44;

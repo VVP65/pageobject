@@ -13,7 +13,7 @@ public class JquerySortablePageTest extends BaseTest {
                 .highlightSortablePageElement()
                 .getFirstSortableElementText();
 
-        logger.info(String.format("Sortable list contains %s", firstSortableElementText));
+        log.info(String.format("Sortable list contains %s", firstSortableElementText));
         Assert.assertTrue(firstSortableElementText.contains("Item 7"), "This element does not refer to first element in a sorted list");
     }
 }

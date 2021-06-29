@@ -14,28 +14,28 @@ public class NavigationTest extends BaseTest {
                 .openGooglePage()
                 .getPageTitle();
 
-        logger.info(String.format("Google Home Page Title: %s", googleHomePageTitle));
+        log.info(String.format("Google Home Page Title: %s", googleHomePageTitle));
         softAssertion.assertTrue(googleHomePageTitle.contains("Google"), "Current page does not belong to Google Home Page");
 
         String wikipediaHomePageTitle = new WikipediaHomePage(driver)
                 .openWikipediaHomePage()
                 .getPageTitle();
 
-        logger.info(String.format("Wikipedia Home Page Title: %s", wikipediaHomePageTitle));
+        log.info(String.format("Wikipedia Home Page Title: %s", wikipediaHomePageTitle));
         softAssertion.assertTrue(wikipediaHomePageTitle.contains("Wikipedia, the free encyclopedia"), "Current page does not belong to Wikipedia project");
 
         String bbcNewsHomePageTitle = new BbcNewsHomePage(driver)
                 .openBbcNewsHomePage()
                 .getPageTitle();
 
-        logger.info(String.format("BBC News Home Page Title: %s", bbcNewsHomePageTitle));
+        log.info(String.format("BBC News Home Page Title: %s", bbcNewsHomePageTitle));
         softAssertion.assertTrue(bbcNewsHomePageTitle.contains("BBC News"), "Current page does not belong to BBC news");
 
         String jQuerySortablePageTitle = new JquerySortablePage(driver)
                 .openJquerySortablePage()
                 .getPageTitle();
 
-        logger.info(String.format("JQuery Sortable Page Title: %s", jQuerySortablePageTitle));
+        log.info(String.format("JQuery Sortable Page Title: %s", jQuerySortablePageTitle));
         softAssertion.assertTrue(jQuerySortablePageTitle.contains("Sortable | jQuery UI"), "Current page does not belong to JQuery 'Sortable' page");
 
         softAssertion.assertAll();

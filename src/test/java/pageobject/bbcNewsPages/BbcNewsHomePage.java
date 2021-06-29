@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import pageobject.basePage.BasePage;
 
 public class BbcNewsHomePage extends BasePage {
-    private static final String BBC_NEWS_HOMEPAGE_URL = "https://www.bbc.com/news";
+    private static final String BBC_NEWS_HOMEPAGE_URL = "testdata.bbc.news.homepage.url";
 
     @FindBy(xpath = ".//input[@id='orb-search-q']")
     private WebElement bbcNewsSearchInput;

@@ -7,7 +7,7 @@ import pageobject.wikipediaPages.WikipediaGoogleSearchResultsPage;
 import pageobject.basePage.BasePage;
 
 public class GoogleHomePage extends BasePage {
-    private static final String GOOGLE_HOMEPAGE_URL = "https://google.com";
+    private static final String GOOGLE_HOMEPAGE_URL = "testdata.google.homepage.url";
 
     @FindBy(name = "q")
     private WebElement googleSearchInput;

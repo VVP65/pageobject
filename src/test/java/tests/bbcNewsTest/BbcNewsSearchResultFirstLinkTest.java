@@ -13,7 +13,7 @@ public class BbcNewsSearchResultFirstLinkTest extends BaseTest {
                 .searchForTerms("Ukraine")
                 .searchFirstLinkName();
 
-        logger.info(String.format("BBC News first search result link name : %s", bbcNewsSearchResultFirstLinkTest));
+        log.info(String.format("BBC News first search result link name : %s", bbcNewsSearchResultFirstLinkTest));
         Assert.assertTrue(bbcNewsSearchResultFirstLinkTest.contains("Ukraine"), "BBC News first search result link name does not contain 'Ukraine' text");
     }
 }
