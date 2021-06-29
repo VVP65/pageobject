@@ -13,7 +13,7 @@ public class WikipediaGoogleSearchResultTest extends BaseTest {
                 .searchForTerms("wikipedia")
                 .searchFirstLinkName();
 
-        logger.info(String.format("Wikipedia Google search result page URL : %s", wikipediaGoogleSearchResult));
+        log.info(String.format("Wikipedia Google search result page URL : %s", wikipediaGoogleSearchResult));
         Assert.assertTrue(wikipediaGoogleSearchResult.contains("wikipedia.org"), "Google search result page does not contain 'wikipedia.org' text");
     }
 }

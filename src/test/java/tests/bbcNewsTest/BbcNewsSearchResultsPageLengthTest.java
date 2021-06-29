@@ -13,7 +13,7 @@ public class BbcNewsSearchResultsPageLengthTest extends BaseTest {
                 .searchForTerms("Ukraine")
                 .bbcNewsSearchResultPageLength();
 
-        logger.info(String.format("BBC News Search Result Page Length: %s", bbcNewsSearchResultsPageLength));
+        log.info(String.format("BBC News Search Result Page Length: %s", bbcNewsSearchResultsPageLength));
         Assert.assertTrue(bbcNewsSearchResultsPageLength > 0, "BBC News search result for 'Ukraine' text does not contain expected text.");
     }
 }
