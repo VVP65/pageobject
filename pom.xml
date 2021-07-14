@@ -92,11 +92,11 @@
             <artifactId>allure-maven-plugin</artifactId>
             <version>2.6</version>
         </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-cucumber4-jvm</artifactId>
-            <version>2.14.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-cucumber4-jvm</artifactId>-->
+<!--            <version>2.14.0</version>-->
+<!--        </dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -121,7 +121,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                        -Dcucumber.options="--plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
+<!--                        -Dcucumber.options="&#45;&#45;plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"-->
                     </argLine>
                 </configuration>
                 <dependencies>
