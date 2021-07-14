@@ -16,13 +16,13 @@ public class GoogleStepDefinitions extends BaseTest {
     }
 
     @When("^I search ([\\w ]+)$")
-    public void iSearchWikipedia() {
-        new GoogleHomePage(DriverSingleton.getDriver()).searchForTerms("Wikipedia");
+    public void iSearchWikipedia(String term) {
+        new GoogleHomePage(DriverSingleton.getDriver()).searchForTerms(term);
     }
 
     @Then("^I can see ([\\w ]+) home page address on the search result page$")
-    public void iCanSeeWikipediaHomePageAddressOnTheSearchResultPage(String actualResult) {
-        String wikipediaGoogleSearchResult = new WikipediaGoogleSearchResultsPage(DriverSingleton.getDriver()).searchFirstLinkName();
-        Assert.assertTrue(wikipediaGoogleSearchResult.contains(actualResult), "Google search result page does not contain 'wikipedia.org' text");
+    public void iCanSeeWikipediaHomePageAddressOnTheSearchResultPage(String wikipediaGoogleSearchExpectedResult) {
+        String wikipediaGoogleSearchActualResult = new WikipediaGoogleSearchResultsPage(DriverSingleton.getDriver()).searchFirstLinkName();
+        Assert.assertTrue(wikipediaGoogleSearchActualResult.contains(wikipediaGoogleSearchExpectedResult), "Google search result page does not contain 'wikipedia.org' text");
     }
 }
