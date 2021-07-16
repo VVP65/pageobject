@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
                 "html:target/cucumber-html-report"
         },
         glue = "stepdefinitions",
-        features="src/test/resources"
+        features = "src/test/resources"
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {
