@@ -84,19 +84,16 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>4.4.0</version>
-<!--            <scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>5.3.9</version>
-<!--            <scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.13</version>
-<!--            <scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
