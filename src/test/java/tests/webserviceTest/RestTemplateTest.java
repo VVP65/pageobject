@@ -9,7 +9,7 @@ import users.Users;
 
 import java.util.Objects;
 
-public class RestTemplateTest extends Users {
+public class RestTemplateTest {
     @Test
     public void checkStatusCode() {
         RestTemplate restTemplate = new RestTemplate();

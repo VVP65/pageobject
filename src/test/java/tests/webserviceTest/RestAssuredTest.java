@@ -27,7 +27,6 @@ public class RestAssuredTest {
         Response response = RestAssured.when()
                 .get("/users")
                 .andReturn();
-
         String responseContentTypeHeader = response.getHeader("Content-Type");
         Assert.assertEquals(responseContentTypeHeader, "application/json; charset=utf-8");
     }
