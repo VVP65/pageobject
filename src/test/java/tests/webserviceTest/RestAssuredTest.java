@@ -38,7 +38,7 @@ public class RestAssuredTest {
                 .get("/users")
                 .andReturn();
         ResponseBody<?> responseBody = response.getBody();
-        Users[] posts = responseBody.as(Users[].class);
-        Assert.assertEquals(posts.length, 10);
+        Users[] users = responseBody.as(Users[].class);
+        Assert.assertEquals(users.length, 10);
     }
 }
