@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class JqueryAboutSectionTest extends BaseTest {
     @Test
-    public void interactionsWithJqueryAboutSection() {
+    public void jQueryAboutSectionCheck() {
         String jqueryAboutSection = new JquerySortablePage(driver)
                 .openJquerySortablePage()
                 .jQueryAboutSectionText();

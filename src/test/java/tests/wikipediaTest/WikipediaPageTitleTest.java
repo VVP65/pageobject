@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class WikipediaPageTitleTest extends BaseTest {
     @Test
-    public void getWikipediaPageTitle() {
+    public void wikipediaPageTitleCheck() {
         String wikipediaPageTitle = new WikipediaHomePage(driver)
                 .openWikipediaHomePage()
                 .getPageTitle();
