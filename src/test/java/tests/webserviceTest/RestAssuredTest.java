@@ -17,7 +17,7 @@ public class RestAssuredTest {
     @Test
     public void statusCodeCheck() {
         Response response = RestAssured.when()
-                .get("/user")
+                .get("/users")
                 .andReturn();
         Assert.assertEquals(response.getStatusCode(), 200);
     }
@@ -25,7 +25,7 @@ public class RestAssuredTest {
     @Test
     public void headerResponseCheck() {
         Response response = RestAssured.when()
-                .get("/user")
+                .get("/users")
                 .andReturn();
         String responseContentTypeHeader = response.getHeader("Content-Type");
         Assert.assertEquals(responseContentTypeHeader, "application/json; charset=utf-8");
@@ -34,7 +34,7 @@ public class RestAssuredTest {
     @Test
     public void bodyResponseCheck() {
         Response response = RestAssured.when()
-                .get("/user")
+                .get("/users")
                 .andReturn();
         ResponseBody<?> responseBody = response.getBody();
         User[] users = responseBody.as(User[].class);
