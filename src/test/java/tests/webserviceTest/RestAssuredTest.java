@@ -6,7 +6,7 @@ import io.restassured.response.ResponseBody;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import users.Users;
+import user.User;
 
 public class RestAssuredTest {
     @BeforeTest
@@ -17,7 +17,7 @@ public class RestAssuredTest {
     @Test
     public void statusCodeCheck() {
         Response response = RestAssured.when()
-                .get("/users")
+                .get("/user")
                 .andReturn();
         Assert.assertEquals(response.getStatusCode(), 200);
     }
@@ -25,7 +25,7 @@ public class RestAssuredTest {
     @Test
     public void headerResponseCheck() {
         Response response = RestAssured.when()
-                .get("/users")
+                .get("/user")
                 .andReturn();
         String responseContentTypeHeader = response.getHeader("Content-Type");
         Assert.assertEquals(responseContentTypeHeader, "application/json; charset=utf-8");
@@ -34,10 +34,10 @@ public class RestAssuredTest {
     @Test
     public void bodyResponseCheck() {
         Response response = RestAssured.when()
-                .get("/users")
+                .get("/user")
                 .andReturn();
         ResponseBody<?> responseBody = response.getBody();
-        Users[] users = responseBody.as(Users[].class);
+        User[] users = responseBody.as(User[].class);
         Assert.assertEquals(users.length, 10);
     }
 }
