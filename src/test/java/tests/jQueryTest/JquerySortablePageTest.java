@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 public class JquerySortablePageTest extends BaseTest {
     @Test
-    public void checkPageElementsAfterSorting() {
+    public void afterSortingJQueryPageElementsCheck() {
         String firstSortableElementText = new JquerySortablePage(driver)
                 .openJquerySortablePage()
                 .highlightSortablePageElement()

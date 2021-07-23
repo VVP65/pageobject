@@ -11,7 +11,7 @@ import java.util.Objects;
 
 public class RestTemplateTest {
     @Test
-    public void checkStatusCode() {
+    public void statusCodeCheck() {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Users[]> response = restTemplate.getForEntity("http://jsonplaceholder.typicode.com/users", Users[].class);
         int actualStatusCode = response.getStatusCode().value();
@@ -19,7 +19,7 @@ public class RestTemplateTest {
     }
 
     @Test
-    public void checkResponseHeader() {
+    public void headerResponseCheck() {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Users[]> response = restTemplate.getForEntity("http://jsonplaceholder.typicode.com/users", Users[].class);
         HttpHeaders headers = response.getHeaders();
@@ -29,7 +29,7 @@ public class RestTemplateTest {
     }
 
     @Test()
-    public void checkResponseBody() {
+    public void bodyResponseCheck() {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Users[]> response = restTemplate.getForEntity("http://jsonplaceholder.typicode.com/users", Users[].class);
         Users[] userId = response.getBody();

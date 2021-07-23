@@ -15,7 +15,7 @@ public class RestAssuredTest {
     }
 
     @Test
-    public void checkStatusCode() {
+    public void statusCodeCheck() {
         Response response = RestAssured.when()
                 .get("/users")
                 .andReturn();
@@ -23,7 +23,7 @@ public class RestAssuredTest {
     }
 
     @Test
-    public void checkResponseHeader() {
+    public void headerResponseCheck() {
         Response response = RestAssured.when()
                 .get("/users")
                 .andReturn();
@@ -32,7 +32,7 @@ public class RestAssuredTest {
     }
 
     @Test
-    public void checkResponseBody() {
+    public void bodyResponseCheck() {
         Response response = RestAssured.when()
                 .get("/users")
                 .andReturn();
