@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import pageobject.basePage.BasePage;
 
 public class BbcNewsSearchResultsPage extends BasePage {
-    @FindBy(xpath = "(.//div[contains(@class,'ssrcss-12g')])[1]")
+    @FindBy(xpath = "(.//div[contains(@class,'ssrcss-10kr542')])[1]")
     private WebElement firstBbcNewsSearchResultLink;
 
     public BbcNewsSearchResultsPage(WebDriver driver) {
